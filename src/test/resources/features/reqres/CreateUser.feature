@@ -4,7 +4,8 @@ Feature: Create user API
     Given Create new user with file json "<fileName>"
     When Send request post create user
     Then Status code should be 201
+    And Response body name should be "<name>" and job should be "<job>"
   Examples:
-    |fileName           |
-    |create_user1.json  |
-    |create_user2.json  |
+    |fileName           |name             |job          |
+    |create_user1.json  |Wisnu Munawar 1  |QA Engineer 1|
+    |create_user2.json  |Wisnu Munawar 2  |QA Engineer 2|
